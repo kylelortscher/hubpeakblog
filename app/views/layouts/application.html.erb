@@ -3,15 +3,14 @@
 <head>
   <title>Hubpeakblog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Exo:900' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<div id="sidebar">
 		<div id="logo">
-			<%= link_to root_path do %>
-				<%= image_tag "logo.png" %>
-			<% end %>	
+			<%= link_to "hubpeak", root_path %>
 		</div>
 	<ul>
 		<li class="category">Website</li>
