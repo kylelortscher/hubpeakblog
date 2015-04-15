@@ -7,6 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="sidebar">
+		<div id="logo">
+			<%= link_to root_path do %>
+				<%= image_tag "logo.png" %>
+			<% end %>	
+		</div>
+	<ul>
+		<li class="category">Website</li>
+		<li class="category"><%= link_to "blog", root_path %></li>
+		<li class="category"><%= link_to "about", root_path %></li>
+	</ul>
+	<ul>
+		<li class="category">Social</li>
+		<li><a href="youtube.com/hubpeak">YouTube</a></li>
+		<li><a href="soundcloud.com/hubpeak">Podcast</a></li>
+		<li><a href="hubpeak.com/email">Stay Updated!</a></li>
+		<li><a href="mailto:support@hubpeak.com">Email Us</a></li>
+	</ul>		
+	</div>	
 
 <%= yield %>
 
