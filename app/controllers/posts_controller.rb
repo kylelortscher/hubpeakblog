@@ -18,14 +18,27 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post = Post.find(post_params[:id])
+		@post = Post.find(params[:id])
 	end	
 
-	private
+	def edit
+		@post = Post.find(params[:id])
+	end
+	
+	def update
+		@post = Post.find(params[:id])
 
-	def post_params
-		params.require(:post).permit(:title, :body)
+		if @post.update(params[:post].permit(:title, :body))
+			redirect_to @post
+		else
+			render 'edit'
+		end
 	end
 
+
+private
+		def post_params
+			params.require(:post).permit(:title, :body)
+		end
 end
 	
